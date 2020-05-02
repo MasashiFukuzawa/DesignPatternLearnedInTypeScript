@@ -19,9 +19,9 @@ export class HTMLBuilder extends Builder {
 
   makeItems(items: string[]): void {
     let data = `<ul>\n`;
-    for (let i = 0; i < items.length; i++) {
-      data = data.concat('', `<li>${items[i]}</li>\n`);
-    }
+    items.forEach(item => {
+      data = data.concat('', `<li>${item}</li>\n`);
+    });
     data = data.concat('', `</ul>\n`);
     this.writer(data);
   }

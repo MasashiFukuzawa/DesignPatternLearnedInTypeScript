@@ -4,11 +4,11 @@ export class UnderlinePen implements Product {
   constructor(private readonly ulchar: string) {}
 
   use(s: string) {
-    const length = Buffer.byteLength(s);
+    const length = Buffer.byteLength(s) + 2;
     console.log(`"${s}"`);
-    for (let i = 0; i < length; i++) {
+    Array.from({length: length}).forEach(() => {
       process.stdout.write(`${this.ulchar}`);
-    }
+    });
     console.log('');
   }
 

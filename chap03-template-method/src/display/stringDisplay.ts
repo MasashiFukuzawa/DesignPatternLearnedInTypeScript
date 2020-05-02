@@ -22,9 +22,9 @@ export class StringDisplay extends AbstractDisplay {
 
   private printLine() {
     process.stdout.write('+');
-    for (let i = 0; i < this.width; i++) {
+    Array.from({length: this.width}).forEach(() => {
       process.stdout.write('-');
-    }
+    });
     console.log('+');
   }
 }

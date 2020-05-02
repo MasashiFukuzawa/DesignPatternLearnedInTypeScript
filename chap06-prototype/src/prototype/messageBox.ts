@@ -4,15 +4,15 @@ export class MessageBox implements Product {
   constructor(private readonly decochar: string) {}
 
   use(s: string) {
-    const length = Buffer.byteLength(s);
-    for (let i = 0; i < length + 4; i++) {
+    const length = Buffer.byteLength(s) + 4;
+    Array.from({length: length}).forEach(() => {
       process.stdout.write(`${this.decochar}`);
-    }
+    });
     console.log('');
     console.log(`${this.decochar} ${s} ${this.decochar}`);
-    for (let j = 0; j < length + 4; j++) {
+    Array.from({length: length}).forEach(() => {
       process.stdout.write(`${this.decochar}`);
-    }
+    });
     console.log('');
   }
 

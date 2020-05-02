@@ -5,9 +5,9 @@ export abstract class AbstractDisplay {
 
   display(): void {
     this.open();
-    for (let i = 0; i < 5; i++) {
+    Array.from({length: 5}).forEach(() => {
       this.print();
-    }
+    });
     this.close();
   }
 }

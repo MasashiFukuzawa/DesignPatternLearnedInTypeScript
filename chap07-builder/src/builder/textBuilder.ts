@@ -13,9 +13,9 @@ export class TextBuilder extends Builder {
   }
 
   makeItems(items: string[]): void {
-    for (let i = 0; i < items.length; i++) {
-      this.buffer = this.buffer.concat('', `  - ${items[i]}\n`);
-    }
+    items.forEach(item => {
+      this.buffer = this.buffer.concat('', `  - ${item}\n`);
+    });
     this.buffer = this.buffer.concat('', `\n`);
   }
 

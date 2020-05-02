@@ -11,7 +11,7 @@ class Main {
 
     const it = bookshelf.iterator();
     while (it.hasNext()) {
-      let book = it.next();
+      const book = it.next();
       console.log(book.getName());
     }
   }
