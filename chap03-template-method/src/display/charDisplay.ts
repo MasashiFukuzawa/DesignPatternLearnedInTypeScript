@@ -3,7 +3,6 @@ import { AbstractDisplay } from "./abstractDisplay";
 export class CharDisplay extends AbstractDisplay {
   constructor(private readonly ch: string) {
     super();
-    this.ch = ch;
   }
 
   open() {

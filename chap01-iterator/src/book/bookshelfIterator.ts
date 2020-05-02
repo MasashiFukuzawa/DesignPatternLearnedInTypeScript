@@ -2,10 +2,8 @@ import { Iterator } from '../interface/iterator'
 import { Bookshelf } from './bookshelf'
 
 export class BookshelfIterator implements Iterator {
-private index: number;
-constructor(private readonly bookshelf: Bookshelf) {
-  this.index = 0;
-}
+private index = 0;
+constructor(private readonly bookshelf: Bookshelf) {}
 
   hasNext() {
     return this.index < this.bookshelf.getLength();

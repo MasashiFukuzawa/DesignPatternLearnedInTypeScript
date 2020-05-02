@@ -4,10 +4,9 @@ import { BookshelfIterator } from './bookshelfIterator'
 
 export class Bookshelf implements Aggregate {
   private readonly books: Book[];
-  private last: number;
+  private last = 0;
   constructor(initialSize: number) {
     this.books = new Array(initialSize);
-    this.last = 0;
   }
 
   appendBook(book: Book) {

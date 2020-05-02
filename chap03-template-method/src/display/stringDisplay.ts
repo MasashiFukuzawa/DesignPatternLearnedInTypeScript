@@ -4,7 +4,6 @@ export class StringDisplay extends AbstractDisplay {
   private readonly width: number;
   constructor(private readonly string: string) {
     super();
-    this.string = string;
     this.width = Buffer.byteLength(string);
   }
 

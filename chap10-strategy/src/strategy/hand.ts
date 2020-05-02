@@ -1,6 +1,14 @@
 export class Hand {
-  static handList = { guu: 0, cho: 1, paa: 2 };
-  static hand = [new Hand(Hand.handList.guu), new Hand(Hand.handList.cho), new Hand(Hand.handList.paa)];
+  static handList = {
+    guu: 0,
+    cho: 1,
+    paa: 2
+  };
+  static hand = [
+    new Hand(Hand.handList.guu),
+    new Hand(Hand.handList.cho),
+    new Hand(Hand.handList.paa)
+  ];
   static handName = ['グー', 'チョキ', 'パー'];
 
   constructor(private readonly handValue: number) {}
