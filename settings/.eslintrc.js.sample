@@ -42,7 +42,7 @@ module.exports = {
     'newline-before-return': 'error',
     'no-console': 'warn',
     'no-continue': 'off',
-    'require-yield': 'error'
+    'require-yield': 'error',
 
     // @typescript-eslint
     '@typescript-eslint/explicit-function-return-type': 'off',
