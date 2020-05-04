@@ -6,6 +6,6 @@ declare global {
   }
 }
 
-Math.getRandomInt = (seed: number) => {
+Math.getRandomInt = (seed: number): number => {
   return Math.floor(Math.random() * (Math.floor(seed)));
 };

@@ -4,15 +4,15 @@ import { ListTray } from "./listTray";
 import { ListPage } from "./listPage";
 
 export class ListFactory extends Factory {
-  createLink(caption: string, url: string) {
+  createLink(caption: string, url: string): ListLink {
     return new ListLink(caption, url);
   }
 
-  createTray(caption: string) {
+  createTray(caption: string): ListTray {
     return new ListTray(caption);
   }
 
-  createPage(title: string, author: string) {
+  createPage(title: string, author: string): ListPage {
     return new ListPage(title, author);
   }
 }

@@ -5,15 +5,15 @@ export class CharDisplay extends AbstractDisplay {
     super();
   }
 
-  open() {
+  open(): void {
     process.stdout.write('<<')
   }
 
-  print() {
+  print(): void {
     process.stdout.write(this.ch)
   }
 
-  close() {
+  close(): void {
     console.log('>>');
   }
 }

@@ -1,7 +1,7 @@
 import { LoginFrame } from "./mediator/loginFrame"
 
 class Main {
-  main() {
+  main(): void {
     const l = new LoginFrame();
 
     // when guest

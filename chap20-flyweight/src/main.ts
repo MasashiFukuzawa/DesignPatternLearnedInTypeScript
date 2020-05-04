@@ -1,7 +1,7 @@
 import { BigString } from "./client/bigString";
 
 class Main {
-  main() {
+  main(): void {
     new BigString("1212123");
   }
 }

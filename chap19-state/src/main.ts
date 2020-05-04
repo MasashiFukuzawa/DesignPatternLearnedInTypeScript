@@ -2,7 +2,7 @@ import './extensions/math.extensions'
 import { SafeFrame } from "./context/safeFrame";
 
 class Main {
-  main() {
+  main(): void {
     const safe = new SafeFrame();
     Array.from({length: 24}).forEach((_, hour) => {
       safe.setClock(hour);

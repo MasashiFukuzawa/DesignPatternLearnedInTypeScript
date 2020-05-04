@@ -1,6 +1,6 @@
 export class Memento {
   private fruits: string[] = [];
-  constructor(readonly money: number) {}
+  constructor(private readonly money: number) {}
 
   getMoney(): number {
     return this.money;

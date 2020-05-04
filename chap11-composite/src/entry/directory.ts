@@ -12,9 +12,7 @@ export class Directory extends Entry {
 
   getSize(): number {
     let size = 0;
-    this.directory.forEach(entry => {
-      size += entry.getSize();
-    });
+    this.directory.forEach((e) => size += e.getSize());
     return size;
   }
 
@@ -25,8 +23,6 @@ export class Directory extends Entry {
 
   printList(prefix: string): void {
     console.log(`${prefix}/${this}`);
-    this.directory.forEach(entry => {
-      entry.printList(`${prefix}/${this.name}`);
-    });
+    this.directory.forEach((e) => e.printList(`${prefix}/${this.name}`));
   }
 }

@@ -8,18 +8,11 @@ export abstract class NumberGenerator {
   }
 
   deleteObserver(observer: Observer): void {
-    this.observers.forEach((o, i) => {
-      // todo
-      if (o !== observer) {
-        this.observers.splice(i, 1);
-      }
-    });
+    this.observers = this.observers.filter((e) => e !== observer);
   }
 
   notifyObservers(): void {
-    this.observers.forEach(o => {
-      o.update(this);
-    });
+    this.observers.forEach((e) => e.update(this));
   }
 
   abstract getNumber(): number;

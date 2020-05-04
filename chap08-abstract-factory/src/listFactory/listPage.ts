@@ -10,9 +10,7 @@ export class ListPage extends Page {
     html = html.concat('', `<body>\n`);
     html = html.concat('', `<h1>${this.title}</h1>\n`);
     html = html.concat('', `<ul>\n`);
-    this.content.forEach(c => {
-      html = html.concat('', c.makeHTML());
-    });
+    this.content.forEach((e) => html = html.concat('', e.makeHTML()));
     html = html.concat('', `</ul>\n`);
     html = html.concat('', `<address>${this.author}</address>`);
     html = html.concat('', `</body></html>\n`);

@@ -3,7 +3,7 @@ import { Product } from "./product";
 export class UnderlinePen implements Product {
   constructor(private readonly ulchar: string) {}
 
-  use(s: string) {
+  use(s: string): void {
     const length = Buffer.byteLength(s) + 2;
     console.log(`"${s}"`);
     Array.from({length: length}).forEach(() => {
@@ -12,12 +12,14 @@ export class UnderlinePen implements Product {
     console.log('');
   }
 
-  createClone() {
+  createClone(): Product {
+    let clone: Product;
     try {
-      const clone = Object.assign(Object.create(Object.getPrototypeOf(this)), this);
-      return clone;
+      clone = Object.assign(Object.create(Object.getPrototypeOf(this)), this);
     } catch(e) {
       console.log(e);
+      throw new Error('Failed to clone.')
     }
+    return clone;
   }
 }

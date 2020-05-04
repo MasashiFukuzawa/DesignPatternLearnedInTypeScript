@@ -1,7 +1,7 @@
 import { PrinterProxy } from "./printer/printerProxy";
 
 class Main {
-  main() {
+  main(): void {
     const p = new PrinterProxy('Alice');
     console.log(`Current name is ${p.getPrinterName()}.`)
     p.setPrinterName('Bob');

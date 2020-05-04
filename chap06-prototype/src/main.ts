@@ -3,7 +3,7 @@ import { UnderlinePen } from "./prototype/underlinePen";
 import { MessageBox } from "./prototype/messageBox";
 
 class Main {
-  main() {
+  main(): void {
     const manager = new Manager();
     const upen = new UnderlinePen('~');
     const mbox = new MessageBox('*');

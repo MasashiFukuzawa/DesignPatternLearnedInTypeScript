@@ -4,7 +4,7 @@ import { DrawCanvas } from "./drawer/drawCanvas";
 import { DrawCommand } from "./drawer/drawCommand";
 
 class Main {
-  main() {
+  main(): void {
     const history = new MacroCommand();
     const canvas = new DrawCanvas(400, 400, history);
 

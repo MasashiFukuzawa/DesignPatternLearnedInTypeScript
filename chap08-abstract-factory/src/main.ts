@@ -2,7 +2,7 @@ import { Factory } from "./factory/factory";
 import { ListFactory } from "./listFactory/listFactory";
 
 class Main {
-  main() {
+  main(): void {
     const args = process.argv;
 
     if (args.length > 3) {

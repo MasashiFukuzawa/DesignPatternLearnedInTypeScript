@@ -14,9 +14,7 @@ export class Directory extends Entry {
 
   getSize(): number {
     let size = 0;
-    this.dir.forEach(entry => {
-      size += entry.getSize();
-    });
+    this.dir.forEach((e) => size += e.getSize());
     return size;
   }
 

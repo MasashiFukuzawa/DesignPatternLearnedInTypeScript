@@ -4,23 +4,17 @@ import { ColleagueTextField } from "../colleague/colleagueTextField";
 import { ColleagueButton } from "../colleague/colleagueButton";
 
 export class LoginFrame implements Mediator {
-  checkGuest: ColleagueCheckbox;
-  checkLogin: ColleagueCheckbox;
-  textUser: ColleagueTextField;
-  textPass: ColleagueTextField;
-  buttonOk: ColleagueButton;
-  buttonCancel: ColleagueButton;
+  checkGuest: ColleagueCheckbox = new ColleagueCheckbox();
+  checkLogin: ColleagueCheckbox = new ColleagueCheckbox();
+  textUser = new ColleagueTextField('');
+  textPass = new ColleagueTextField('');
+  buttonOk = new ColleagueButton();
+  buttonCancel = new ColleagueButton();
   constructor() {
-    this.checkGuest = new ColleagueCheckbox();
-    this.checkLogin = new ColleagueCheckbox();
-    this.textUser = new ColleagueTextField('');
-    this.textPass = new ColleagueTextField('');
-    this.buttonOk = new ColleagueButton();
-    this.buttonCancel = new ColleagueButton();
     this.createColleagues();
   }
 
-  createColleagues() {
+  createColleagues(): void {
     this.checkGuest.setMediator(this);
     this.checkLogin.setMediator(this);
     this.textUser.setMediator(this);
@@ -40,7 +34,7 @@ export class LoginFrame implements Mediator {
     }
   }
 
-  private userPassChanged() {
+  private userPassChanged(): void {
     if (this.textUser.getText().length > 0) {
       this.textPass.setColleagueEnabled(true);
       if (this.textPass.getText().length > 0) {

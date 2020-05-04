@@ -6,11 +6,11 @@ export class IDCard extends Product {
     console.log(`Create ${this.owner}'s card.`);
   }
 
-  use() {
+  use(): void {
     console.log(`Use ${this.owner}'s card.`);
   }
 
-  getOwner() {
+  getOwner(): string {
     return this.owner;
   }
 }

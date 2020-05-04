@@ -27,7 +27,6 @@ class Main {
     } else {
       console.log(`Usage: node build/main.js plain`);
       console.log(`Usage: node build/main.js html`);
-      return;
     }
   }
 }

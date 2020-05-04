@@ -2,7 +2,7 @@ import { Directory } from "./entry/directory";
 import { File } from "./entry/file";
 
 class Main {
-  main() {
+  main(): void {
     console.log('Making root entries...');
     const rootDir = new Directory('root');
     const binDir = new Directory('bin');

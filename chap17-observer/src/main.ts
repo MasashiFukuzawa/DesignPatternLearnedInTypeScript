@@ -4,8 +4,8 @@ import { DigitObserver } from "./subscriber/digitObserver";
 import { GraphObserver } from "./subscriber/graphObserver";
 
 class Main {
-  main() {
-    const generator: NumberGenerator = new RandomNumberGenerator();
+  main(): void {
+    const generator = new RandomNumberGenerator();
     const observer1 = new DigitObserver();
     const observer2 = new GraphObserver();
     generator.addObserver(observer1);

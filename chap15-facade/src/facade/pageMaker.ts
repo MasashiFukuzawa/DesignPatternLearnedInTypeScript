@@ -4,7 +4,8 @@ import { Database } from "./database";
 export class PageMaker {
   static makeWelcomePage(mailAddr: string, fileName: string): void {
     try {
-      const userName = Database.getProperty(mailAddr);
+      const mailProp = Database.getProperty("maildata");
+      const userName = mailProp.getProperty(mailAddr);
       const writer = new HTMLWriter(fileName);
       writer.title(`Welcome to ${userName}'s page!'`);
       writer.paragraph(`${userName}のページへようこそ。`);

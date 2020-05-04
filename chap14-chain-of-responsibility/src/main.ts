@@ -5,7 +5,7 @@ import { OddSupport } from "./supportHandler/oddSupport";
 import { Trouble } from "./trouble/trouble";
 
 class Main {
-  main() {
+  main(): void {
     const alice = new NoSupport('Alice');
     const bob = new LimitSupport('Bob', 100);
     const charlie = new SpecialSupport('Charlie', 429);
@@ -19,9 +19,7 @@ class Main {
           setNext(elmo).
           setNext(fred);
 
-    Array.from({length: 300}).forEach((_, i) => {
-      alice.support(new Trouble(i));
-    });
+    Array.from({length: 300}).forEach((_, i) => alice.support(new Trouble(i)));
   }
 }
 

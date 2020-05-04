@@ -1,11 +1,11 @@
 export class Banner {
   constructor(private readonly string: string) {}
 
-  showWithParen() {
+  showWithParen(): void {
     console.log(`(${this.string})`);
   }
 
-  showWithAster() {
+  showWithAster(): void {
     console.log(`*${this.string}*`);
   }
 }

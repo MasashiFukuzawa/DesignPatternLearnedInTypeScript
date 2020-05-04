@@ -14,14 +14,14 @@ export class Gamer {
     return this.fruits;
   }
 
-  bet() {
+  bet(): void {
     const dice: number = Math.getRandomInt(6) + 1;
     if (dice === 1) {
       this.money += 100;
       console.log('You got money.');
     } else if (dice === 2) {
       this.money /= 2;
-      'Your money became in half.'
+      console.log('Your money became in half.');
     } else if (dice === 6) {
       const fruit = this.getFruit();
       if (!!this.fruits) {
@@ -29,15 +29,15 @@ export class Gamer {
         this.fruits.push(fruit);
       }
     } else {
-      console.log('Nothing happened.')
+      console.log('Nothing happened.');
     }
   }
 
   createMemento(): Memento {
     const memento = new Memento(this.money);
-    this.fruits.forEach(f => {
-      if (f.match(/Delicious/)) {
-        memento.addFruits(f);
+    this.fruits.forEach((e) => {
+      if (e.match(/Delicious/)) {
+        memento.addFruits(e);
       }
     });
     return memento;

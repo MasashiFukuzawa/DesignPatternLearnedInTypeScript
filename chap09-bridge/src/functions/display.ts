@@ -15,7 +15,7 @@ export class Display {
   this.impl.rawClose();
   }
 
-  display() {
+  display(): void {
     this.open();
     this.print();
     this.close();

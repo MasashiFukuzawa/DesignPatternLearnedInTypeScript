@@ -12,11 +12,11 @@ export class DrawCanvas {
     Canvas.background(Color.white);
   }
 
-  paint() {
+  paint(): void {
     this.history.execute();
   }
 
-  draw(x: number, y: number) {
+  draw(x: number, y: number): void {
     const g = new Graphics();
     g.color(this.color);
     g.fillOval(
@@ -29,11 +29,11 @@ export class DrawCanvas {
 }
 
 class Canvas {
-  static size(width: number, height: number) {
+  static size(width: number, height: number): void {
     // do something
   }
 
-  static background(color: Color) {
+  static background(color: Color): void {
     // do something
   }
 }
@@ -44,11 +44,11 @@ class Color {
 }
 
 class Graphics {
-  color(color: Color) {
+  color(color: Color): void {
     // do something
   }
 
-  fillOval(x: number, y: number, width: number, height: number) {
+  fillOval(x: number, y: number, width: number, height: number): void {
     // do something
   }
 }

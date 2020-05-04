@@ -3,7 +3,7 @@ import { File } from "./entry/file";
 import { ListVisitor } from "./visitor/listVisitor";
 
 class Main {
-  main() {
+  main(): void {
     console.log('Making root entries...');
     const rootDir = new Directory('root');
     const binDir = new Directory('bin');

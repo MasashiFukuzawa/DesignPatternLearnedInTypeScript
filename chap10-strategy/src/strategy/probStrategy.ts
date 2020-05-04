@@ -32,9 +32,7 @@ export class ProbStrategy implements Strategy {
 
   sum(hv: number): number {
     let sum = 0;
-    Array.from({length: 3}).forEach((_, i) => {
-      sum += this.history[hv][i];
-    });
+    Array.from({length: 3}).forEach((_, i) => sum += this.history[hv][i]);
     return sum;
   }
 }

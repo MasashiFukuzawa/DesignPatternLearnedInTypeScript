@@ -6,7 +6,7 @@ import { NightState } from "../state/nightState";
 export class SafeFrame implements Context {
   private state: State = NightState.getInstance();
 
-  actionPerformed() {
+  actionPerformed(): void {
     const random = Math.getRandomInt(12) + 1;
     if (random % 3 == 0) {
       this.state.doUse(this);
@@ -18,7 +18,7 @@ export class SafeFrame implements Context {
   }
 
   setClock(hour: number): void {
-    let str = 'Current time is '
+    let str = 'Current time is ';
     if (hour < 10) {
       str = str.concat('', `0${hour}:00`);
     } else {

@@ -1,17 +1,16 @@
 import * as fs from 'fs';
-import { Node } from './expression/node';
 import { ProgramNode } from './expression/programNode';
 import { Context } from './context/context';
 
 class Main {
-  main() {
+  main(): void {
     const content = fs.readFileSync('./src/program.txt');
     const lines = content.toString().split(`\n`);
-    lines.forEach(line => {
-      if (!!line) {
-        console.log(`text = "${line}"`);
-        const node: Node = new ProgramNode();
-        node.parse(new Context(line));
+    lines.forEach((e) => {
+      if (!!e) {
+        console.log(`text = "${e}"`);
+        const node = new ProgramNode();
+        node.parse(new Context(e));
         console.log(`node = ${node.toString()}`.replace(/[\"]/g, ''));
         console.log('----------------------');
       }

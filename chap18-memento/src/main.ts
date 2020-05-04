@@ -1,12 +1,12 @@
 import { Gamer } from "./originator/gamer";
 
 class Main {
-  main() {
+  main(): void {
     const gamer = new Gamer(100);
     const memento = gamer.createMemento();
 
     Array.from({length: 100}).forEach((_, i) => {
-      console.log(`==== ${i}`);
+      console.log(`==== ${i + 1}`);
       const gamerMoney = Math.round(gamer.getMoney());
       console.log(`current_state: [${gamerMoney}, ${gamer.getFruits().filter(e => !!e)}]`);
       gamer.bet();

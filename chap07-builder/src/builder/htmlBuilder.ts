@@ -3,7 +3,7 @@ import { Builder } from "./builder";
 
 export class HTMLBuilder extends Builder {
   private filename: string = '';
-  private writer = (data: string) => {
+  private writer = (data: string): void => {
     fs.appendFileSync(this.filename, data);
   };
 

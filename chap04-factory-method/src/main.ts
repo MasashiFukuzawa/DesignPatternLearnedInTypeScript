@@ -1,7 +1,7 @@
 import { IDCardFactory } from "./idCard/idCardFactory";
 
 class Main {
-  main() {
+  main(): void {
     const factory = new IDCardFactory();
     const card1 = factory.create('Tanjiro');
     const card2 = factory.create('Zenitsu');

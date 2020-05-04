@@ -3,7 +3,7 @@ import { StringDisplayImpl } from "./implements/stringDisplayImpl";
 import { CountDisplay } from "./functions/countDisplay";
 
 class Main {
-  main() {
+  main(): void {
     const d1 = new Display(new StringDisplayImpl('Hello, Japan.'));
     const d2 = new CountDisplay(new StringDisplayImpl('Hello, world.'));
     const d3 = new CountDisplay(new StringDisplayImpl('Hello, universe.'));

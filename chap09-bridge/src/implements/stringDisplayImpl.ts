@@ -21,9 +21,7 @@ export class StringDisplayImpl extends DisplayImpl {
 
   printLine(): void {
     process.stdout.write('+')
-    Array.from({length: this.width}).forEach(() => {
-      process.stdout.write('-')
-    });
+    Array.from({length: this.width}).forEach(() => process.stdout.write('-'));
     console.log('+');
   }
 }

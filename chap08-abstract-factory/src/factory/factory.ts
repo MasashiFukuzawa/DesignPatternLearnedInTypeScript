@@ -9,9 +9,7 @@ interface Constructable<T> extends Function {
 export abstract class Factory {
   static factories: Constructable<Factory>[] = [];
   static getFactory(className: string): Factory {
-    const factory = this.factories.find(f => {
-      return f.name === className;
-    });
+    const factory = this.factories.find((e) => e.name === className);
     if (factory) {
       return new factory();
     } else {

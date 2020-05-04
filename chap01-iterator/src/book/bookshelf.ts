@@ -9,20 +9,20 @@ export class Bookshelf implements Aggregate {
     this.books = new Array(initialSize);
   }
 
-  appendBook(book: Book) {
+  appendBook(book: Book): void {
     this.books[this.last] = book;
     this.last++;
   }
 
-  getBookAt(index: number) {
+  getBookAt(index: number): Book {
     return this.books[index];
   }
 
-  getLength() {
+  getLength(): number {
     return this.last;
   }
 
-  iterator() {
+  iterator(): BookshelfIterator {
     return new BookshelfIterator(this);
   }
 }

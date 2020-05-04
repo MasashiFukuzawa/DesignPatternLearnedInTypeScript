@@ -1,9 +1,7 @@
 import * as fs from 'fs'
 
 export class HTMLWriter {
-  private writer = (data: string) => {
-    fs.appendFileSync(this.fileName, data)
-  };
+  private writer = (data: string): void => fs.appendFileSync(this.fileName, data);
   constructor(private readonly fileName: string) {}
 
   title(title: string): void {
@@ -21,7 +19,7 @@ export class HTMLWriter {
     this.writer(data);
   }
 
-  link(href: string, caption: string) {
+  link(href: string, caption: string): void {
     this.paragraph(`<a href=${href}>${caption}</a>`);
   }
 

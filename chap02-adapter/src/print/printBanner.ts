@@ -8,11 +8,11 @@ export class PrintBanner extends Print {
     this.banner = new Banner(string);
   }
 
-  printWeak() {
+  printWeak(): void {
     this.banner.showWithParen();
   }
 
-  printStrong() {
+  printStrong(): void {
     this.banner.showWithAster();
   }
 }

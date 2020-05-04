@@ -12,9 +12,7 @@ export abstract class Page {
   output(): void {
     try {
       const filename = `${this.title}.html`;
-      const writer = (data: string) => {
-        fs.appendFileSync(filename, data);
-      };
+      const writer = (data: string): void => fs.appendFileSync(filename, data);
       writer(this.makeHTML());
       console.log(`Created ${filename}.`);
     } catch (e) {

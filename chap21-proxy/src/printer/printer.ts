@@ -18,11 +18,9 @@ export class Printer implements Printable {
     console.log(string);
   }
 
-  private heavyJob(msg: string) {
+  private heavyJob(msg: string): void {
     console.log(msg);
-    Array.from({length: 5}).forEach(() => {
-      process.stdout.write('.');
-    });
+    Array.from({length: 5}).forEach(() => process.stdout.write('.'));
     console.log('Completed.');
   }
 }

@@ -1,7 +1,7 @@
 import { Singleton } from "./singleton";
 
 class Main {
-  main() {
+  main(): void {
     console.log('Start.')
     const obj1 = Singleton.getInstance();
     const obj2 = Singleton.getInstance();

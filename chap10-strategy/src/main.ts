@@ -3,7 +3,7 @@ import { WinningStrategy } from "./strategy/winningStrategy";
 import { ProbStrategy } from "./strategy/probStrategy";
 
 class Main {
-  main() {
+  main(): void {
     const player1 = new Player('Taro', new WinningStrategy());
     const player2 = new Player('Hana', new ProbStrategy());
 

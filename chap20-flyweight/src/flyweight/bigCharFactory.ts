@@ -8,7 +8,7 @@ export class BigCharFactory {
   private pool: { [key: string]: BigChar } = {};
 
   getBigChar(charName: string): BigChar {
-    let bc = this.pool[charName]
+    let bc = this.pool[charName];
     if (!bc) {
       bc = new BigChar(charName);
       this.pool[charName] = bc;

@@ -3,15 +3,13 @@ import { Command } from "./command"
 export class MacroCommand {
   private commands: Command[] = []
 
-  execute() {
-    this.commands.forEach(cmd => {
-      cmd.execute();
-    });
+  execute(): void {
+    this.commands.forEach((e) => e.execute());
   }
 
   append(cmd: Command): void {
     if (cmd !== this) {
-      this.commands.push(cmd)
+      this.commands.push(cmd);
     }
   }
 
@@ -21,7 +19,7 @@ export class MacroCommand {
     }
   }
 
-  clear() {
+  clear(): void {
     this.commands = [];
   }
 }

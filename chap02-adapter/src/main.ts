@@ -1,7 +1,7 @@
 import { PrintBanner } from './print/printBanner'
 
 class Main {
-  main() {
+  main(): void {
     const p = new PrintBanner('Hello');
     p.printWeak();
     p.printStrong();

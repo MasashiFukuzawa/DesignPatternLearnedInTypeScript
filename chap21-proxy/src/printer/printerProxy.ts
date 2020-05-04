@@ -23,7 +23,7 @@ export class PrinterProxy implements Printable {
     this.real?.print(string);
   }
 
-  private realize() {
+  private realize(): void {
     if (!this.real) {
       this.real = new Printer(this.name);
     }

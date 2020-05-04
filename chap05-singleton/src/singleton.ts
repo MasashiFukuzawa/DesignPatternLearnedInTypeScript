@@ -4,7 +4,7 @@ export class Singleton {
     console.log('Create an instance.');
   }
 
-  static getInstance() {
+  static getInstance(): Singleton {
     return this.singleton;
   }
 }
