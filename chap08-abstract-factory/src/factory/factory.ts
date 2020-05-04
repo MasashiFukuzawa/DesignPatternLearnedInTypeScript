@@ -1,15 +1,11 @@
 import { Link } from "./link";
 import { Tray } from "./tray";
 import { Page } from "./page";
-
-interface Constructable<T> extends Function {
-  new (...args: any[]): T;
-}
+import { FactoryRepository } from "../repository/factoryRepository";
 
 export abstract class Factory {
-  static factories: Constructable<Factory>[] = [];
   static getFactory(className: string): Factory {
-    const factory = this.factories.find((e) => e.name === className);
+    const factory = FactoryRepository.factories.find((e) => e.name === className);
     if (factory) {
       return new factory();
     } else {

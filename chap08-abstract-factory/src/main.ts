@@ -1,5 +1,6 @@
 import { Factory } from "./factory/factory";
 import { ListFactory } from "./listFactory/listFactory";
+import { FactoryRepository } from "./repository/factoryRepository";
 
 class Main {
   main(): void {
@@ -10,7 +11,7 @@ class Main {
       throw new Error('Invalid argument.');
     }
 
-    Factory.factories.push(ListFactory);
+    FactoryRepository.factories.push(ListFactory);
     const className = args[2];
     const factory = Factory.getFactory(className);
     const asahi = factory.createLink('Asahi', 'https://www.asashi.com');
